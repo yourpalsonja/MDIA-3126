@@ -1,23 +1,18 @@
 import { View, StyleSheet } from 'react-native';
-import { WigglyStrawberry } from '@/components/WigglyStrawberry';
+import { Wiggle } from '@/components/atoms/Wiggle';
 
 export default function HomeScreen() {
   return (
- 
-      <View style={styles.titleContainer}>
-        <WigglyStrawberry />
+      <View style={styles.strawberryContainer}>
+        <Wiggle wiggler="🍓" />
       </View>
-     
   );
 }
 
 const styles = StyleSheet.create({
-  titleContainer: {
-    flexDirection: 'row',
+  strawberryContainer: {
     alignItems: 'center',
-    gap: 8,
     justifyContent: 'center',
-    height: '100vh',
-    backgroundColor: 'papayawhip'
+    flex: 1,
   }
 });

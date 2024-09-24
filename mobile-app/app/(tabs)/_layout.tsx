@@ -1,7 +1,7 @@
 import { Tabs } from 'expo-router';
 import React from 'react';
 
-import { TabBarIcon } from '@/components/navigation/TabBarIcon';
+import { TabBarIcon } from '@/components/atoms/TabBarIcon';
 import { Colors } from '@/constants/Colors';
 import { useColorScheme } from '@/hooks/useColorScheme';
 
@@ -17,9 +17,9 @@ export default function TabLayout() {
       <Tabs.Screen
         name="index"
         options={{
-          title: '🍓',
-          tabBarIcon: ({ color, focused }) => (
-            <TabBarIcon name={focused ? 'home' : 'home-outline'} color={color} />
+          title: 'Home',
+          tabBarIcon: ({ focused }) => (
+            <TabBarIcon emoji="🍓" focused={focused} />
           ),
         }}
       />
@@ -27,8 +27,17 @@ export default function TabLayout() {
         name="cheese"
         options={{
           title: 'Cheese',
-          tabBarIcon: ({ color, focused }) => (
-            <TabBarIcon name={focused ? 'woman-sharp' : 'woman-sharp'} color={color} />
+          tabBarIcon: ({ focused }) => (
+            <TabBarIcon emoji="🧀" focused={focused} />
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="caesar-salad"
+        options={{
+          title: 'Ceasar Salad',
+          tabBarIcon: ({ focused }) => (
+            <TabBarIcon emoji="🥬" focused={focused} />
           ),
         }}
       />

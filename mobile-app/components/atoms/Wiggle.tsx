@@ -1,4 +1,4 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet, Text } from 'react-native';
 import Animated, {
   useSharedValue,
   useAnimatedStyle,
@@ -7,14 +7,12 @@ import Animated, {
   withSequence,
 } from 'react-native-reanimated';
 
-import { ThemedText } from '@/components/ThemedText';
-
-export function WigglyStrawberry() {
+export function Wiggle({ wiggler }) {
   const rotationAnimation = useSharedValue(0);
 
   rotationAnimation.value = withRepeat(
-    withSequence(withTiming(25, { duration: 150 }), withTiming(0, { duration: 150 })),
-    4 // Run the animation 4 times
+    withSequence(withTiming(25, { duration: 250 }), withTiming(0, { duration: 250 })),
+    0 // run it foreverrrrrr
   );
 
   const animatedStyle = useAnimatedStyle(() => ({
@@ -23,15 +21,13 @@ export function WigglyStrawberry() {
 
   return (
     <Animated.View style={animatedStyle}>
-      <ThemedText style={styles.text}>🍓</ThemedText>
+      <Text style={styles.text}>{wiggler}</Text>
     </Animated.View>
   );
 }
 
 const styles = StyleSheet.create({
   text: {
-    lineHeight: 32,
-    marginTop: -6,
-    fontSize: 200
+    fontSize: 150,
   },
 });
