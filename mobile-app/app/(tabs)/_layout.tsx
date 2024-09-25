@@ -41,6 +41,15 @@ export default function TabLayout() {
           ),
         }}
       />
+      <Tabs.Screen
+        name="api"
+        options={{
+          title: 'API',
+          tabBarIcon: ({ focused }) => (
+            <TabBarIcon emoji="🗺️" focused={focused} />
+          ),
+        }}
+      />
     </Tabs>
   );
 }

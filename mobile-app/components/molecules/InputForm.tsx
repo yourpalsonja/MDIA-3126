@@ -7,7 +7,7 @@ export default function InputForm({ labelText, placeholderText, buttonText }) {
     return (
         <View className="mb-4">
             <Text className="mb-2">{labelText}</Text>
-            <div className="flex flex-row">
+            <View className="flex flex-row">
                 <Input
                     placeholderText={placeholderText}
                 />
@@ -16,7 +16,7 @@ export default function InputForm({ labelText, placeholderText, buttonText }) {
                     text={buttonText}
                     colors={['#B4C424', '#8A9A5B', '#808000']}
                 />
-            </div>
+            </View>
         </View>
     )
 }
