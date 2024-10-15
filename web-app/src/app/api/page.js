@@ -39,7 +39,12 @@ export default function Page() {
                 productsList.push(<li key={index}>~{product.name}~</li>);
             });
 
-            return <ul>{productsList}</ul>;
+            return (
+                <div>
+                    <h1>There are {products.length} items to choose from:</h1>
+                    <ul>{productsList}</ul>
+                </div>
+            );
         }
 
         return <div className='text-6xl'>🌭🫛🍖🫘🥫</div>;
