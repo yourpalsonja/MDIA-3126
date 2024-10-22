@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { Cherry_Swash } from "next/font/google";
-import { createClient } from "@/utils/supabase/clients";
+import { createClient } from "@/utils/supabase/client";
 
 const font = Cherry_Swash({
     weight: "700",
